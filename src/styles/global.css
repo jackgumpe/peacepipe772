@@ -157,8 +157,6 @@ a {
   line-height: 0.86;
 }
 
-  .tagline { font-size: 1rem; word-break: break-word; }
-  .pill { font-size: 0.8rem; padding: 6px 10px; }
 
 .tagline {
   max-width: 100%;
@@ -179,11 +177,11 @@ a {
   border: 1px solid rgba(245, 230, 66, 0.44);
   min-width: 0;
   border-radius: 999px;
-  padding: 9px 13px;
+  padding: clamp(0.2rem, 0.8vw, 0.5rem) clamp(0.4rem, 1.2vw, 0.8rem);
   background: rgba(26, 26, 26, 0.66);
   color: var(--color-cream);
   overflow-wrap: break-word;
-  font-size: 0.88rem;
+  font-size: clamp(0.65rem, 1.4vw, 0.85rem);
 }
 
 .pill--accent {
@@ -422,7 +420,6 @@ h3 {
   }
 
   .tagline { font-size: 1rem; word-break: break-word; }
-  .pill { font-size: 0.8rem; padding: 6px 10px; }
 
   .gallery-strip img {
     height: 260px;
