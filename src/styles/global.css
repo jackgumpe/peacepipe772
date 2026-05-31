@@ -74,6 +74,7 @@ a {
 
 .brand-mark {
   display: grid;
+  grid-template-columns: 100%;
   gap: 0;
 }
 
@@ -113,6 +114,7 @@ a {
   position: relative;
   min-height: 82vh;
   display: grid;
+  grid-template-columns: 100%;
   align-items: end;
   overflow: hidden;
 }
@@ -228,12 +230,14 @@ h3 {
 
 .category-grid {
   display: grid;
+  grid-template-columns: 100%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
 .category-card {
   display: grid;
+  grid-template-columns: 100%;
   overflow: hidden;
   border: 2px solid rgba(212, 76, 127, 0.36);
   border-radius: 8px;
@@ -297,6 +301,7 @@ h3 {
 
 .about-band {
   display: grid;
+  grid-template-columns: 100%;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 42px;
   align-items: stretch;
@@ -323,6 +328,7 @@ h3 {
 
 .gallery-strip {
   display: grid;
+  grid-template-columns: 100%;
   grid-template-columns: 1.3fr repeat(4, 1fr);
   gap: 16px;
 }
@@ -339,6 +345,7 @@ h3 {
 
 .visit-panel {
   display: grid;
+  grid-template-columns: 100%;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
   align-items: stretch;
@@ -383,6 +390,7 @@ h3 {
 
   .site-header {
     display: grid;
+  grid-template-columns: 100%;
   }
 
   .site-nav {
@@ -413,4 +421,11 @@ h3 {
   .gallery-strip img {
     height: 260px;
   }
+}
+
+@media (max-width: 400px) {
+  .hero__content { padding: 80px 0 60px; }
+  .hero h1 { font-size: 2.8rem; }
+  .tagline { font-size: 1rem; max-width: 100%; word-break: break-word; }
+  .pill { font-size: 0.8rem; padding: 6px 10px; }
 }
