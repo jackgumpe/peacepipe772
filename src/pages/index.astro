@@ -86,7 +86,7 @@ import '../styles/global.css';
             <div class="visit-card">
               <h3>{brand.catalogStatus}</h3>
               <p>
-                The eBay catalog link will be added when the verified URL is ready. Until then, this site stays a static local catalog with no fake links and no online sales flow.
+                {brand.ebayUrl ? <a href={brand.ebayUrl} target="_blank" rel="noopener">Browse eBay listings →</a> : <span>The eBay catalog link will be added when the verified URL is ready.</span>}
               </p>
             </div>
           </div>

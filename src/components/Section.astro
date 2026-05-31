@@ -2,11 +2,12 @@
 const { id, kicker, title } = Astro.props;
 ---
 
-<section class="section" id={id}>
-  <div class="section__head">
-    {kicker && <p class="eyebrow">{kicker}</p>}
-    <h2>{title}</h2>
+<section class={`section section--${id}`} id={id}>
+  <div class="section__inner">
+    <div class="section__head">
+      {kicker && <p class="eyebrow">{kicker}</p>}
+      <h2>{title}</h2>
+    </div>
+    <slot />
   </div>
-  <slot />
 </section>
-
