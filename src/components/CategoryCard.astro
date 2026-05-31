@@ -1,0 +1,13 @@
+---
+const { category } = Astro.props;
+---
+
+<article class="category-card">
+  <img src={category.image} alt={category.alt} loading="lazy" width="1000" height="750" />
+  <div class="category-card__body">
+    <p class="eyebrow">{category.status}</p>
+    <h3>{category.name}</h3>
+    <p>{category.copy}</p>
+  </div>
+</article>
+

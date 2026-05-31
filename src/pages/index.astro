@@ -1,0 +1,99 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Section from '../components/Section.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import brand from '../data/brand.json';
+import categories from '../data/categories.json';
+import gallery from '../data/gallery.json';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PeacePipe Smoke Shop in Fort Pierce, Florida. Static catalog preview for glass, papers, trays, vaporizers, incense, and store favorites."
+    />
+    <title>{brand.name} | {brand.location}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-shell" id="top">
+      <Header />
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero__image">
+            <img src="/images/storefront.jpg" alt="PeacePipe Smoke Shop storefront in Fort Pierce, Florida." width="750" height="1000" />
+          </div>
+          <div class="hero__content">
+            <p class="eyebrow">{brand.location}</p>
+            <h1 id="hero-title">{brand.shortName}</h1>
+            <p class="tagline">{brand.tagline}</p>
+            <div class="hero__meta" aria-label="Catalog status">
+              <span class="pill pill--accent">{brand.catalogStatus}</span>
+              <span class="pill">Static catalog only</span>
+              <span class="pill">No online sales</span>
+            </div>
+          </div>
+        </section>
+
+        <Section id="catalog" kicker="Inventory preview" title="What you will find in store">
+          <div class="category-grid">
+            {categories.map((category) => <CategoryCard category={category} />)}
+          </div>
+        </Section>
+
+        <Section id="about" kicker="Local trust" title="Built for quick, local browsing">
+          <div class="about-band">
+            <p class="about-copy">
+              PeacePipe is a Fort Pierce smoke shop with real shelves, real cases, and a catalog that will stay focused on what is actually available.
+            </p>
+            <div class="about-note">
+              <p>
+                Online ordering is not enabled. The first release is a static catalog preview for adult customers who want to see the shop, the categories, and the current direction before visiting.
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        <Section id="gallery" kicker="Inside PeacePipe" title="Storefront, shelves, and cases">
+          <div class="gallery-strip">
+            {
+              gallery.map((image) => (
+                <img src={image.src} alt={image.alt} loading="lazy" width="1000" height="750" />
+              ))
+            }
+          </div>
+        </Section>
+
+        <Section id="visit" kicker="Contact and visit" title="Stop by in Fort Pierce">
+          <div class="visit-panel">
+            <div class="visit-card">
+              <h3>{brand.name}</h3>
+              <p><strong>{brand.location}</strong></p>
+              <p>{brand.tagline}</p>
+            </div>
+            <div class="visit-card">
+              <h3>{brand.catalogStatus}</h3>
+              <p>
+                The eBay catalog link will be added when the verified URL is ready. Until then, this site stays a static local catalog with no fake links and no online sales flow.
+              </p>
+            </div>
+          </div>
+        </Section>
+      </main>
+
+      <Footer />
+    </div>
+  </body>
+</html>

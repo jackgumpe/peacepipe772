@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Glass & Pipes",
+    "image": "/images/glass-pipes.jpg",
+    "alt": "Glass pipes displayed on shelves inside PeacePipe Smoke Shop.",
+    "copy": "Glass pieces, hand pipes, bubblers, and daily-use shelf staples available in store.",
+    "status": "Catalog coming soon"
+  },
+  {
+    "name": "Rolling Papers",
+    "image": "/images/rolling-papers.jpg",
+    "alt": "Rolling paper and smoke shop supplies arranged on a PeacePipe product wall.",
+    "copy": "Papers, wraps, tips, and small counter essentials stocked for quick visits.",
+    "status": "Catalog coming soon"
+  },
+  {
+    "name": "Trays & Accessories",
+    "image": "/images/trays-accessories.jpg",
+    "alt": "Rolling trays and accessories displayed inside PeacePipe Smoke Shop.",
+    "copy": "Trays, grinders, cases, lighters, and accessories for a cleaner setup.",
+    "status": "Catalog coming soon"
+  },
+  {
+    "name": "Vaporizers & Electronics",
+    "image": "/images/vaporizers.jpg",
+    "alt": "Vaporizer and electronic accessories in a PeacePipe display case.",
+    "copy": "Devices, chargers, replacement parts, and electronic accessories for adult customers.",
+    "status": "Catalog coming soon"
+  },
+  {
+    "name": "Incense",
+    "image": "/images/incense.jpg",
+    "alt": "Incense and fragrance products on display at PeacePipe Smoke Shop.",
+    "copy": "Incense, fragrance items, and shelf favorites for the home or shop counter.",
+    "status": "Catalog coming soon"
+  },
+  {
+    "name": "Store Favorites",
+    "image": "/images/bubbler.jpg",
+    "alt": "A bubbler displayed with other popular PeacePipe glass items.",
+    "copy": "Rotating picks from the cases, walls, and front counter.",
+    "status": "Catalog coming soon"
+  }
+]
+
